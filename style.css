@@ -35,11 +35,11 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .projects, .skills, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content, 
-.services .serv-content,
+.projects .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display: flex;
@@ -141,7 +141,7 @@ section .title::after{
     right: 30px;
     bottom: 10px;
     text-align: center;
-    line-height: 45px;
+    line-height: 40px;
     color: white;
     z-index: 9999;
     font-size: 30px;
@@ -254,19 +254,24 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
-.services{
+/* projects section styling */
+.projects{
     color:#fff;
     background: #111;
+    display: flex;
+    flex-wrap: wrap;
 }
-.services .title::before{
+.projects > *{
+    flex: 1 1 100%;;
+}
+.projects .title::before{
     background: #fff;
 }
-.services .title::after{
+.projects .title::after{
     background: #111;
     content: "what i have done";
 }
-.services .serv-content .card{
+.projects .serv-content .card{
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
@@ -275,30 +280,30 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+.projects .serv-content .card:hover{
     background: blue;
 }
-.services .serv-content .card .box{
+.projects .serv-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.projects .serv-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .box a{
+.projects .box a{
     color: #fff;
 }
-.services .box4 a{
+.projects .box4 a{
     color: #fff;
 }
-.services .serv-content .card i{
+.projects .serv-content .card i{
     font-size: 50px;
     color: blue;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+.projects .serv-content .card:hover i{
     color: #fff;
 }
-.services .serv-content .card .text{
+.projects .serv-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -375,6 +380,15 @@ section .title::after{
 
 .skills-content .right .mysql::before{
     width: 70%;
+}
+.skills-content .right .mongodb::before{
+    width: 60%;
+}
+.skills-content .right .react::before{
+    width: 30%;
+}
+.skills-content .right .node::before{
+    width: 40%;
 }
 
 /* contact section styling */
@@ -548,7 +562,7 @@ section .title::after{
     .about .about-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .projects .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -572,7 +586,7 @@ section .title::after{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .projects .serv-content .card{
         width: 100%;
     }
 }

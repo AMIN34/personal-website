@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to left, #3a7dc9,#8d58ca);
+        font-family: sans-serif;
+        color: white;
+}
+.location, .temp{
+        height: 30vh;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+}
+.temp{
+        flex-direction: column;
+}
+.temp-reading{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.temp-reading span{
+    margin: 30%;
+    font-size: 1.5em;
+}
+.temp-reading h2{
+    font-size: 2em;
+}
